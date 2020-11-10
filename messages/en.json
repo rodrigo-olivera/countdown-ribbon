@@ -1,0 +1,15 @@
+{
+  "admin/countdown-ribbon.name": "Countdown Ribbon",
+  "admin/countdown-ribbon.properties.active": "Active",
+  "admin/countdown-ribbon.properties.dueDateTime": "Due Date",
+  "admin/countdown-ribbon.properties.text": "Text",
+  "admin/countdown-ribbon.properties.button.path": "Path",
+  "admin/countdown-ribbon.properties.button.text": "Button Text",
+  "store/countdown-ribbon.seconds": "Seconds",
+  "store/countdown-ribbon.minutes": "Minutes",
+  "store/countdown-ribbon.hours": "Hours",
+  "store/countdown-ribbon.days": "Days",
+  "store/countdown-ribbon.default.text":"This is some awesome text",
+  "store/countdown-ribbon.default.buttonText": "Shop Now",
+  "store/countdown-ribbon.default.buttonPath": "/"
+}
