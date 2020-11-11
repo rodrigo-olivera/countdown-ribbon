@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+/* eslint-disable import/no-nodejs-modules */
 import React, { Fragment } from 'react'
 import { injectIntl, defineMessages } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'
@@ -54,7 +54,7 @@ const CountdownRibbon: StorefrontFunctionComponent<CountdownRibbonProps> = ({
               renderer={props => {
                 return (
                   <div className={`${handles.countdown} dtc tc pv4 w-30`}>
-                    <div className={`dt dt--fixed`}>
+                    <div className="dt dt--fixed">
                       <div className="dtc tc ph5">
                         <div className="dt-row f2">{props.days}</div>
                         <div className="dt-row">
@@ -108,7 +108,7 @@ const CountdownRibbon: StorefrontFunctionComponent<CountdownRibbonProps> = ({
             renderer={props => {
               return (
                 <div className={`${handles.countdown_mobile} dt-row`}>
-                  <div className={`dt dt--fixed`}>
+                  <div className="dt dt--fixed">
                     <div className="dtc tc ph5">
                       <div className="dt-row f2">{props.days}</div>
                       <div className="dt-row">
@@ -146,7 +146,7 @@ const CountdownRibbon: StorefrontFunctionComponent<CountdownRibbonProps> = ({
               )
             }}
           />
-          <div className={`dt dt--fixed pt4`}>
+          <div className="dt dt--fixed pt4">
             <div
               className={`${handles.text_mobile} dtc tc ph5`}
               dangerouslySetInnerHTML={{ __html: marked(text) }}
