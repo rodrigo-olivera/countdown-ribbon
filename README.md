@@ -1,9 +1,5 @@
 # Countdown Ribon
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
 The `countdown-ribbon` is a block responsible for adding a countdow ribbon in to the header of the site.
 
 ![image](https://user-images.githubusercontent.com/65255533/98749331-fd74ac00-2380-11eb-86c4-b68ab079f6c8.png)
