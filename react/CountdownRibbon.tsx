@@ -46,14 +46,48 @@ const CountdownRibbon: StorefrontFunctionComponent<CountdownRibbonProps> = ({
         <div className={`${handles.container} dt dt--fixed bg-white`}>
           <div className="dt-row pv5">
             <div
-              className={`${handles.text} dtc tc f3 pv4 w-50`}
+              className={`${handles.text} dtc tc f3 pv4 w-20`}
               dangerouslySetInnerHTML={{ __html: marked(text) }}
             />
             <Countdown
               date={dateTime}
               renderer={props => {
                 return (
-                  <div className={`${handles.countdown} dtc tc pv4 w-30`}>
+                  <div className={`${handles.countdown} dtc tc pv4 w-80`}>
+                    <div className="dt dt--row">
+                      <div className="dtc tc ph2">
+                        <div className="dt-row f6"><span className={`fw7`}>{props.days} </span> {intl.formatMessage({ id: 'store/countdown-ribbon.days' })}:</div>
+                      </div>
+                      <div className="dtc tc ph2">
+                        <div className="dt-row f6"><span className={`fw7`}>{props.hours} </span> {intl.formatMessage({ id: 'store/countdown-ribbon.hours' })}:</div>
+                      </div>
+                      <div className="dtc tc ph2">
+                        <div className="dt-row f6"><span className={`fw7`}>{props.minutes} </span> {intl.formatMessage({ id: 'store/countdown-ribbon.minutes' })}:</div>
+                      </div>
+                      <div className="dtc tc ph2">
+                        <div className="dt-row f6"><span className={`fw7`}>{props.seconds} </span> {intl.formatMessage({ id: 'store/countdown-ribbon.seconds' })}</div>
+                      </div>
+                    </div>
+                  </div>
+                )
+              }}
+            />
+            {/* <div className={`${handles.button} dtc tc pv4 w-20`}>
+              <Button variation="primary" href={buttonURI}>
+                {buttonText}
+              </Button>
+            </div> */}
+          </div>
+        </div>
+      ) : (
+          <div
+            className={`${handles.container_mobile} dt dt--fixed pt4 ph4 bg-white`}
+          >
+            <Countdown
+              date={dateTime}
+              renderer={props => {
+                return (
+                  <div className={`${handles.countdown_mobile} dt-row`}>
                     <div className="dt dt--fixed">
                       <div className="dtc tc ph5">
                         <div className="dt-row f2">{props.days}</div>
@@ -92,73 +126,19 @@ const CountdownRibbon: StorefrontFunctionComponent<CountdownRibbonProps> = ({
                 )
               }}
             />
-            <div className={`${handles.button} dtc tc pv4 w-20`}>
-              <Button variation="primary" href={buttonURI}>
-                {buttonText}
-              </Button>
+            <div className="dt dt--fixed pt4">
+              <div
+                className={`${handles.text_mobile} dtc tc ph5`}
+                dangerouslySetInnerHTML={{ __html: marked(text) }}
+              />
+              <div className={`${handles.button_mobile} dtc tc ph5`}>
+                <Button variation="primary" href={buttonURI}>
+                  {buttonText}
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      ) : (
-        <div
-          className={`${handles.container_mobile} dt dt--fixed pt4 ph4 bg-white`}
-        >
-          <Countdown
-            date={dateTime}
-            renderer={props => {
-              return (
-                <div className={`${handles.countdown_mobile} dt-row`}>
-                  <div className="dt dt--fixed">
-                    <div className="dtc tc ph5">
-                      <div className="dt-row f2">{props.days}</div>
-                      <div className="dt-row">
-                        {intl.formatMessage({
-                          id: 'store/countdown-ribbon.days',
-                        })}
-                      </div>
-                    </div>
-                    <div className="dtc tc ph5">
-                      <div className="dt-row f2">{props.hours}</div>
-                      <div className="dt-row">
-                        {intl.formatMessage({
-                          id: 'store/countdown-ribbon.hours',
-                        })}
-                      </div>
-                    </div>
-                    <div className="dtc tc ph5">
-                      <div className="dt-row f2">{props.minutes}</div>
-                      <div className="dt-row">
-                        {intl.formatMessage({
-                          id: 'store/countdown-ribbon.minutes',
-                        })}
-                      </div>
-                    </div>
-                    <div className="dtc tc ph5">
-                      <div className="dt-row f2">{props.seconds}</div>
-                      <div className="dt-row">
-                        {intl.formatMessage({
-                          id: 'store/countdown-ribbon.seconds',
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )
-            }}
-          />
-          <div className="dt dt--fixed pt4">
-            <div
-              className={`${handles.text_mobile} dtc tc ph5`}
-              dangerouslySetInnerHTML={{ __html: marked(text) }}
-            />
-            <div className={`${handles.button_mobile} dtc tc ph5`}>
-              <Button variation="primary" href={buttonURI}>
-                {buttonText}
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
+        )}
     </Fragment>
   )
 }
